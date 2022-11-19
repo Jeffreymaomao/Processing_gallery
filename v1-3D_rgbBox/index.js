@@ -1,9 +1,13 @@
 let viewportWidth = window.innerWidth;
 let viewportHeight = window.innerHeight;
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
     frameRate(60);
-    createCanvas(viewportWidth, viewportHeight, WEBGL);
+    createCanvas(windowWidth, windowHeight, WEBGL);
     HowFar = 400
     camera(HowFar, -HowFar, HowFar, 0, 0, 0, 0, 1, 0);
     noStroke()
